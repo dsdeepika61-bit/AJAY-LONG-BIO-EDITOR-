@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Shadow background layer -->
+    <path
+        android:pathData="M 25,73 L 28,38 L 42,53 L 54,28 L 66,53 L 80,38 L 83,73 L 54,78 Z"
+        android:fillColor="#40000000" />
+        
+    <!-- Main Crown Body -->
+    <path
+        android:pathData="M 25,70 L 28,35 L 42,50 L 54,25 L 66,50 L 80,35 L 83,70 L 54,75 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="25"
+                android:startY="25"
+                android:endX="83"
+                android:endY="75"
+                android:type="linear">
+                <item android:color="#f7d870" android:offset="0" />
+                <item android:color="#f0c040" android:offset="0.5" />
+                <item android:color="#c99a20" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Stylized central gemstone (White Diamond) -->
+    <path
+        android:pathData="M 54,42 L 59,49 L 54,56 L 49,49 Z"
+        android:fillColor="#ffffff" />
+        
+    <!-- Left gemstone (Diamond path fallback) -->
+    <path
+        android:pathData="M 34,46 L 36,48 L 34,50 L 32,48 Z"
+        android:fillColor="#ffffff" />
+
+    <!-- Right gemstone (Diamond path fallback) -->
+    <path
+        android:pathData="M 74,46 L 76,48 L 74,50 L 72,48 Z"
+        android:fillColor="#ffffff" />
+        
+    <!-- Crown Platform Base Strip -->
+    <path
+        android:pathData="M 23,73 L 85,73 L 83,78 L 25,78 Z"
+        android:fillColor="#ffffff" />
+</vector>

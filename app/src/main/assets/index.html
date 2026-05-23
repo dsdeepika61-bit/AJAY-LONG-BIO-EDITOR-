@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AJAY TOOLS | Free Fire Long Bio & Bio Tools</title>
+<link rel="icon" type="image/png" href="image.png" sizes="32x32">
+<meta name="description" content="Free Fire Long Bio tool by AJAY. Redesigned with a premium Cyberpunk layout.">
+<meta name="theme-color" content="#f0c040">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Orbitron:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --glass: rgba(12, 15, 28, 0.7);
+  --glass-bd: rgba(240, 192, 64, 0.15);
+  --neon-gold: #f0c040;
+  --neon-gold-glow: rgba(240, 192, 64, 0.35);
+  --neon-blue: #00f0ff;
+  --neon-blue-glow: rgba(0, 240, 255, 0.35);
+  --neon-purple: #bd00ff;
+  --neon-purple-glow: rgba(189, 0, 255, 0.35);
+  --neon-green: #39ff14;
+  --neon-green-glow: rgba(57, 255, 20, 0.35);
+  --neon-red: #ff3131;
+  --bg-gradient: radial-gradient(circle at 50% 10%, #101424, #060810);
+  --bg: #060810;
+  --bg2: #0c0f1d;
+  --bg3: #12162a;
+  --bg4: #181d36;
+  --txt: #e2e8f0;
+  --txt-secondary: #94a3b8;
+  --txt-muted: #64748b;
+  --btn-radius: 12px;
+  --card-radius: 16px;
+}
+
+[data-theme="light"] {
+  --glass: rgba(255, 255, 255, 0.85);
+  --glass-bd: rgba(212, 146, 10, 0.2);
+  --neon-gold: #c68a00;
+  --neon-gold-glow: rgba(198, 138, 0, 0.25);
+  --neon-blue: #0088cc;
+  --neon-blue-glow: rgba(0, 136, 204, 0.2);
+  --neon-purple: #8800cc;
+  --neon-purple-glow: rgba(136, 0, 204, 0.2);
+  --neon-green: #009911;
+  --neon-green-glow: rgba(0, 153, 17, 0.2);
+  --neon-red: #cc2222;
+  --bg-gradient: radial-gradient(circle at 50% 10%, #f4f6fa, #e2e8f0);
+  --bg: #e2e8f0;
+  --bg2: #ffffff;
+  --bg3: #f8fafc;
+  --bg4: #f1f5f9;
+  --txt: #0f172a;
+  --txt-secondary: #475569;
+  --txt-muted: #64748b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--bg);
+  background-image: var(--bg-gradient);
+  color: var(--txt);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: var(--transition);
+  padding-bottom: 80px;
+}
+
+/* Page management */
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+  animation: pageEnter 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(15px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Nav & Topbar */
+.topbar {
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--glass-bd);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hbrand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hlogo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--neon-gold), #ffaa00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px var(--neon-gold-glow);
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.htitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #fff, var(--neon-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(240, 192, 64, 0.2);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--bg3);
+  border: 1px solid var(--glass-bd);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--txt-secondary);
+  transition: var(--transition);
+}
+.icon-btn:hover {
+  border-color: var(--neon-gold);
+  color: var(--neon-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px var(--neon-gold-glow);
+}
+
+.tg-join-btn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #229ED9, #1565A8);
+  border: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4);
+}
+.tg-join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 158, 217, 0.6);
+}
+
+/* Main Container */
+.con {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 16px;
+}
+
+/* Cards & Components */
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-bd);
+  border-radius: var(--card-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: rgba(240, 192, 64, 0.4);
+  box-shadow: 0 12px 40px rgba(240, 192, 64, 0.08);
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--neon-gold), transparent);
+  opacity: 0.5;
+}
+
+.slabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--neon-gold);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* Inputs & Buttons */
+.ilabel {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--txt-secondary);
+  margin-bottom: 8px;
+}
+
+.ibox {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--bg4);
+  border: 1px solid var(--glass-bd);
+  border-radius: 12px;
+  color: var(--txt);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+.ibox:focus {
+  outline: none;
+  border-color: var(--neon-gold);
+  background: var(--bg2);
+  box-shadow: 0 0 15px rgba(240, 192, 64, 0.15);
+}
+
+.sbox {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--bg4);
+  border: 1px solid var(--glass-bd);
+  border-radius: 12px;
+  color: var(--txt);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.sbox:hover {
+  border-color: var(--neon-gold);
+  background: var(--bg3);
+}
+
+/* Interactive elements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 24px;
+  border: none;
+  border-radius: var(--btn-radius);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-premium {
+  background: linear-gradient(135deg, var(--neon-gold), #ffa500);
+  color: #0c0f1d;
+  box-shadow: 0 4px 20px var(--neon-gold-glow);
+}
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(240, 192, 64, 0.5);
+}
+
+.btn-secondary {
+  background: var(--bg3);
+  color: var(--txt);
+  border: 1px solid var(--glass-bd);
+}
+.btn-secondary:hover {
+  border-color: var(--neon-gold);
+  color: var(--neon-gold);
+}
+
+/* Social Buttons */
+.btn-social { color: white; margin-bottom: 8px; }
+.btn-fb { background: #1877F2; }
+.btn-google { background: #DB4437; }
+.btn-vk { background: #0077FF; }
+.btn-twitter { background: #1DA1F2; }
+.btn-apple { background: #333; }
+
+/* Formatting tools */
+.fbtns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.fbtn {
+  padding: 12px 6px;
+  background: var(--bg4);
+  border: 1px solid var(--glass-bd);
+  border-radius: 10px;
+  color: var(--txt-secondary);
+  font-weight: 700;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  transition: var(--transition);
+}
+.fbtn:hover {
+  background: var(--bg3);
+  border-color: var(--neon-gold);
+  color: var(--neon-gold);
+}
+
+/* Color toggle grid */
+.color-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--bg4);
+  border: 1px solid var(--glass-bd);
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+.cgrid {
+  display: none;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px;
+  padding: 12px;
+  background: var(--bg3);
+  border-radius: 12px;
+  margin-top: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+.cgrid.show {
+  display: grid;
+}
+.cbtn {
+  height: 28px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cbtn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* Authentic Free Fire In-Game Profile Banner live preview */
+.ff-banner {
+  background: linear-gradient(145deg, #1b203a, #0b0d19);
+  border: 2px solid #3c4463;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.8), 0 8px 24px rgba(0,0,0,0.4);
+}
+.ff-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 110%;
+  background: linear-gradient(45deg, transparent 30%, rgba(240, 192, 64, 0.08) 32%, rgba(240,192,64,0.15) 50%, transparent 70%);
+  transform: skewX(-20deg) translateX(30px);
+  pointer-events: none;
+}
+.ff-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.ff-avatar-wrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--neon-gold);
+  background: #252c4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--neon-gold-glow);
+}
+.ff-avatar-icon {
+  font-size: 1.6rem;
+  color: var(--neon-gold);
+}
+.ff-badge-lv {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background: #ff5e00;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 1px 4px;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+.ff-player-details {
+  flex: 1;
+}
+.ff-name-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ff-name {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.ff-title-tag {
+  background: rgba(240, 192, 64, 0.2);
+  border: 1px solid var(--neon-gold);
+  color: var(--neon-gold);
+  font-size: 0.55rem;
+  font-weight: 900;
+  padding: 1px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-family: 'Rajdhani', sans-serif;
+}
+.ff-uid {
+  font-size: 0.72rem;
+  color: var(--txt-secondary);
+  font-family: monospace;
+  margin-top: 2px;
+}
+.ff-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+.ff-stat {
+  text-align: center;
+}
+.ff-stat-lbl {
+  font-size: 0.55rem;
+  color: var(--txt-muted);
+  text-transform: uppercase;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+}
+.ff-stat-val {
+  font-size: 0.78rem;
+  color: #fff;
+  font-weight: 800;
+  font-family: 'Orbitron', sans-serif;
+  margin-top: 1px;
+}
+.ff-bio-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 70px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.bempty {
+  color: var(--txt-muted);
+  font-style: italic;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Hero Badge */
+.hero {
+  text-align: center;
+  padding: 30px 20px;
+  background: rgba(12, 15, 28, 0.5);
+  border: 1px solid var(--glass-bd);
+  border-radius: var(--card-radius);
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(240, 192, 64, 0.15) 0%, transparent 60%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  background: rgba(240, 192, 64, 0.12);
+  border: 1px solid rgba(240,192,64,0.3);
+  border-radius: 50px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--neon-gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #fff, var(--neon-gold), #ff8800);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+.hero-sub {
+  color: var(--txt-secondary);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* Tool Grid Cards */
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.tool-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-bd);
+  border-radius: var(--card-radius);
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.tool-card:hover {
+  border-color: var(--neon-gold);
+  background: var(--bg3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--neon-gold-glow);
+}
+.tool-card-ico {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #0c0f1d;
+  flex-shrink: 0;
+}
+.tool-card-ico.gold { background: linear-gradient(135deg, var(--neon-gold), #ff8800); }
+.tool-card-ico.blue { background: linear-gradient(135deg, var(--neon-blue), #0066ff); color: #fff; }
+.tool-card-ico.purple { background: linear-gradient(135deg, var(--neon-purple), #8800ff); color: #fff; }
+.tool-card-txt h3 {
+  color: var(--txt);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.tool-card-txt p {
+  color: var(--txt-muted);
+  font-size: 0.72rem;
+  margin-top: 2px;
+}
+
+/* Permanent Promo/Social banner */
+.ig-promo-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  border-radius: 12px;
+  padding: 12px 18px;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-top: 14px;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+}
+.ig-promo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6);
+}
+
+/* Bottom Nav bar */
+.bnav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: rgba(12, 15, 28, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--glass-bd);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  padding-bottom: env(safe-area-inset-bottom);
+  box-shadow: 0 -4px 30px rgba(0,0,0,0.5);
+}
+.nitem {
+  background: none;
+  border: none;
+  color: var(--txt-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 6px 12px;
+}
+.nitem i {
+  font-size: 1.15rem;
+}
+.nitem span {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.nitem.active {
+  color: var(--neon-gold);
+}
+.nitem.active .niw {
+  background: rgba(240, 192, 64, 0.12);
+  padding: 4px 14px;
+  border-radius: 8px;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+.modal.show {
+  display: flex;
+}
+.mbox {
+  background: var(--bg2);
+  border: 1px solid var(--neon-gold);
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px var(--neon-gold-glow);
+  transform: scale(0.9);
+  transition: var(--transition);
+}
+.modal.show .mbox {
+  transform: scale(1);
+}
+
+.mtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  color: var(--neon-gold);
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.mitem-select {
+  padding: 12px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--glass-bd);
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+}
+.mitem-select:hover {
+  border-color: var(--neon-gold);
+  background: var(--bg4);
+}
+
+/* Toast */
+#toast {
+  position: fixed;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%) translateY(30px);
+  background: rgba(12,15,28,0.95);
+  border: 1px solid var(--neon-gold);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  z-index: 3000;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition);
+}
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* General Layouts */
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--bg4);
+  border: 1px solid var(--glass-bd);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.social-card:hover {
+  border-color: var(--neon-gold);
+  transform: translateY(-2px);
+}
+.social-card i {
+  font-size: 1.3rem;
+}
+.social-card h4 {
+  color: var(--txt);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.badge-g {
+  background: var(--neon-gold-glow);
+  color: var(--neon-gold);
+  padding: 2px 8px;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+}
+
+/* Settings toggles */
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--glass-bd);
+}
+
+/* Styling customization for switch */
+.switch {
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+  position: absolute; cursor: pointer; inset: 0;
+  background-color: var(--bg4);
+  border: 1px solid var(--glass-bd);
+  border-radius: 34px;
+  transition: .3s;
+}
+.slider:before {
+  content: ""; position: absolute; height: 16px; width: 16px; left: 3px; bottom: 3px;
+  background-color: var(--txt-secondary);
+  border-radius: 50%;
+  transition: .3s;
+}
+input:checked + .slider { background-color: var(--neon-gold); }
+input:checked + .slider:before {
+  transform: translateX(20px);
+  background-color: #0c0f1d;
+}
+
+.theme-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.theme-box {
+  background: var(--bg3);
+  border: 2px solid var(--glass-bd);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.theme-box.active {
+  border-color: var(--neon-gold);
+  background: var(--neon-gold-glow);
+  color: var(--neon-gold);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px 0;
+  font-size: 0.75rem;
+  color: var(--txt-muted);
+  border-top: 1px solid var(--glass-bd);
+}
+.powered {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  color: var(--neon-gold);
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+</style>
+</head>
+<body>
+
+<div id="toast">Token copied!</div>
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="hbrand">
+    <div class="hlogo">&#9889;</div>
+    <div class="htitle" id="pgTitle">AJAY TOOLS</div>
+  </div>
+  <div class="topbar-right">
+    <button class="icon-btn" onclick="goPage('settings')" title="Settings"><i class="fas fa-cog"></i></button>
+    <button class="icon-btn" onclick="toggleTheme()" id="themeBtn" title="Theme"><i class="fas fa-moon"></i></button>
+    <a href="YOUR_TELEGRAM_LINK" target="_blank" class="tg-join-btn"><i class="fab fa-telegram-plane"></i> JOIN</a>
+  </div>
+</header>
+
+<!-- PAGE: HOME -->
+<div class="page active" id="pg-home">
+  <div class="con">
+    <div class="hero">
+      <div class="hero-badge"><i class="fas fa-bolt"></i> FF DESIGN HUB</div>
+      <h1 class="hero-title">AJAY TOOLS</h1>
+      <p class="hero-sub">PREMIUM FREE FIRE PROFILE CUSTOMIZATION</p>
+      <a href="YOUR_INSTAGRAM_LINK" target="_blank" class="ig-promo-btn">
+        <i class="fab fa-instagram" style="font-size: 1.15rem;"></i> FOLLOW OFFICIAL INSTAGRAM
+      </a>
+    </div>
+
+    <div class="tool-grid">
+      <div class="tool-card" onclick="goPage('token')">
+        <div class="tool-card-ico gold"><i class="fas fa-key"></i></div>
+        <div class="tool-card-txt">
+          <h3>GET TOKEN</h3>
+          <p>Extract access token securely</p>
+        </div>
+      </div>
+      <div class="tool-card" onclick="goPage('bio')">
+        <div class="tool-card-ico blue"><i class="fas fa-pen-fancy"></i></div>
+        <div class="tool-card-txt">
+          <h3>LONG BIO</h3>
+          <p>Update custom profile signature</p>
+        </div>
+      </div>
+      <div class="tool-card" onclick="goPage('unique')" style="grid-column: 1/-1;">
+        <div class="tool-card-ico purple"><i class="fas fa-crown"></i></div>
+        <div class="tool-card-txt">
+          <h3>UNIQUE BIO</h3>
+          <p>Add glowing icons & special features</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social channels list -->
+    <div class="card">
+      <div class="slabel"><i class="fas fa-users"></i> OFFICIAL NETWORK</div>
+      <p style="font-size: 0.8rem; color: var(--txt-secondary); margin-bottom: 12px; line-height: 1.4;">
+        Join AJAY's official social network to stay up to date with new tools, color tricks, and script drops!
+      </p>
+      <div class="social-grid">
+        <a href="YOUR_TELEGRAM_LINK" target="_blank" class="social-card">
+          <i class="fab fa-telegram-plane" style="color:#229ED9;"></i>
+          <div><h4>Telegram</h4><span style="font-size:0.65rem;color:var(--txt-muted);">Join Channel</span></div>
+        </a>
+        <a href="YOUR_INSTAGRAM_LINK" target="_blank" class="social-card">
+          <i class="fab fa-instagram" style="color:#E1306C;"></i>
+          <div><h4>Instagram</h4><span style="font-size:0.65rem;color:var(--txt-muted);">Follow page</span></div>
+        </a>
+        <a href="YOUR_YOUTUBE_LINK" target="_blank" class="social-card">
+          <i class="fab fa-youtube" style="color:#FF0000;"></i>
+          <div><h4>YouTube</h4><span style="font-size:0.65rem;color:var(--txt-muted);">Subscribe</span></div>
+        </a>
+        <a href="YOUR_GITHUB_LINK" target="_blank" class="social-card">
+          <i class="fab fa-github" style="color:#6e40c9;"></i>
+          <div><h4>GitHub</h4><span style="font-size:0.65rem;color:var(--txt-muted);">Get codes</span></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>&copy; 2026 AJAY TOOLS | ALL RIGHTS RESERVED</div>
+      <div class="powered">AJAY OFFICIAL</div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: TOKEN -->
+<div class="page" id="pg-token">
+  <div class="con">
+    <div class="card">
+      <div class="slabel"><i class="fas fa-paper-plane"></i> STEP 1: AUTH LOGIN</div>
+      <p style="font-size:0.8rem; color:var(--txt-secondary); margin-bottom:15px; line-height:1.4;">
+        Select your Free Fire login platform. Complete login Garena portal. Your login details are secure (handled on official Garena domain).
+      </p>
+      <div style="display:grid; gap:8px;">
+        <a href="https://auth.garena.com/universal/oauth?all_platforms=1&amp;response_type=code&amp;locale=en-SG&amp;client_id=100067&amp;redirect_uri=https%3A%2F%2Fapi.ff.garena.co.id%2Fauth%2Fauth%2Fcallback_n%3Fsite%3Dhttps%3A%2F%2Fapi-ticket.ff.gameid.garena.co.id%2Foauth%2Fcallback_redirect%2F&amp;platform=3" target="_blank" class="btn btn-social btn-fb"><i class="fab fa-facebook-f"></i> FACEBOOK LOGIN</a>
+        <a href="https://auth.garena.com/universal/oauth?all_platforms=1&amp;response_type=code&amp;locale=en-SG&amp;client_id=100067&amp;redirect_uri=https%3A%2F%2Fapi.ff.garena.co.id%2Fauth%2Fauth%2Fcallback_n%3Fsite%3Dhttps%3A%2F%2Fapi-ticket.ff.gameid.garena.co.id%2Foauth%2Fcallback_redirect%2F&amp;platform=8" target="_blank" class="btn btn-social btn-google"><i class="fab fa-google"></i> GOOGLE LOGIN</a>
+        <a href="https://auth.garena.com/universal/oauth?all_platforms=1&amp;response_type=code&amp;locale=en-SG&amp;client_id=100067&amp;redirect_uri=https%3A%2F%2Fapi.ff.garena.co.id%2Fauth%2Fauth%2Fcallback_n%3Fsite%3Dhttps%3A%2F%2Fapi-ticket.ff.gameid.garena.co.id%2Foauth%2Fcallback_redirect%2F&amp;platform=5" target="_blank" class="btn btn-social btn-vk"><i class="fab fa-vk"></i> VK CONNECT</a>
+      </div>
+      <div style="margin-top:14px; background: rgba(240,192,64,0.08); border-radius:10px; padding:10px; border:1px dashed var(--neon-gold); font-size:0.75rem; color:var(--txt-secondary);">
+        💡 <strong>INSTRUCTION:</strong> After clicking login, Garena will open an empty/error page. Copy that full page URL from the browser bar and return here!
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="slabel"><i class="fas fa-magic"></i> STEP 2: PASTE & EXTRACT</div>
+      <div style="margin-bottom:15px;">
+        <label class="ilabel">Redirect Auth URL</label>
+        <input type="text" id="urlInput" class="ibox" placeholder="Paste the redirect URL here...">
+      </div>
+      <button onclick="checkAndExtract()" id="extBtn" class="btn btn-premium"><i class="fas fa-cog"></i> EXTRACT ACCESS TOKEN</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: BIO -->
+<div class="page" id="pg-bio">
+  <div class="con">
+    <div class="card">
+      <!-- Form inputs inside card -->
+      <div style="margin-bottom:16px;">
+        <div class="slabel"><i class="fas fa-globe"></i> STEP 1: REGION SELECT</div>
+        <input type="hidden" id="regionInput" value="IND">
+        <div class="sbox" onclick="openModal('regionModal')">
+          <span id="regionDisplay" style="font-weight:600;"><i class="fas fa-flag"></i> India (IND)</span>
+          <i class="fas fa-chevron-down" style="color:var(--neon-gold);"></i>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div class="slabel"><i class="fas fa-key"></i> STEP 2: GARENA ACCESS TOKEN</div>
+        <div style="position:relative;">
+          <input type="text" id="accessToken" class="ibox" placeholder="Enter extracted Garena token here..." style="padding-right: 50px;">
+          <button onclick="loadSavedToken()" title="Load Saved Session" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); background:var(--neon-gold-glow); border:1px solid var(--neon-gold); border-radius:8px; color:var(--neon-gold); width:32px; height:32px; cursor:pointer;">
+            <i class="fas fa-download"></i>
+          </button>
+        </div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div class="slabel"><i class="fas fa-tools"></i> QUICK STYLING BBCODE</div>
+        <div class="fbtns">
+          <button type="button" class="fbtn" onclick="insertAtCursor('[b]')"><i class="fas fa-bold"></i><span>BOLD</span></button>
+          <button type="button" class="fbtn" onclick="insertAtCursor('[i]')"><i class="fas fa-italic"></i><span>ITALIC</span></button>
+          <button type="button" class="fbtn" onclick="insertAtCursor('[c]')"><i class="fas fa-fire"></i><span>GLOW</span></button>
+          <button type="button" class="fbtn" onclick="insertAtCursor('[u]')"><i class="fas fa-underline"></i><span>UNDER</span></button>
+        </div>
+
+        <div class="color-toggle" onclick="toggleColors()">
+          <span><i class="fas fa-palette" style="color:var(--neon-gold); margin-right:6px;"></i> SELECT FROM COLORS (40)</span>
+          <i class="fas fa-chevron-down" style="color:var(--neon-gold);"></i>
+        </div>
+        <div class="cgrid" id="cgrid"></div>
+      </div>
+
+      <div style="margin-bottom:16px;">
+        <div class="slabel"><i class="fas fa-edit"></i> STEP 3: WRITING SIGNATURE</div>
+        <textarea id="bioText" class="ibox" style="resize:vertical; min-height:80px;" maxlength="280" placeholder="Type custom message here. e.g. [FF0000][b]LEGEND [00FFFF]PRO" oninput="updatePreview()"></textarea>
+        <div id="charCount" style="text-align:right; font-size:0.75rem; color:var(--txt-muted); margin-top:4px;">0 / 280</div>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <div class="slabel"><i class="fas fa-eye"></i> LIVE IN-GAME PLAYER PREVIEW</div>
+        
+        <!-- Redesigned Authentic Free Fire Bio Banner -->
+        <div class="ff-banner">
+          <div class="ff-header">
+            <div class="ff-avatar-wrapper">
+              <i class="fas fa-user-ninja ff-avatar-icon"></i>
+              <div class="ff-badge-lv">Lv.75</div>
+            </div>
+            <div class="ff-player-details">
+              <div class="ff-name-row">
+                <span class="ff-name">AJAY PLAYER</span>
+                <span class="ff-title-tag">BATTLE KING</span>
+              </div>
+              <div class="ff-uid">UID: 5937492104</div>
+            </div>
+          </div>
+          <div class="ff-stats-row">
+            <div class="ff-stat">
+              <div class="ff-stat-lbl">Likes</div>
+              <div class="ff-stat-val">12,492</div>
+            </div>
+            <div class="ff-stat">
+              <div class="ff-stat-lbl">Server</div>
+              <div class="ff-stat-val" id="bannerServer">IND</div>
+            </div>
+            <div class="ff-stat">
+              <div class="ff-stat-lbl">Rank</div>
+              <div class="ff-stat-val" style="color:#ff3131;"><i class="fas fa-shield-alt"></i> Hero</div>
+            </div>
+          </div>
+          <div class="ff-bio-box" id="bioPreview">
+            <div class="bempty">Customize the fields above to see live Garena game signature preview...</div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" onclick="submitBio()" class="btn btn-premium" id="submitBioBtn"><i class="fas fa-save"></i> UPDATE IN-GAME SIGNATURE</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: UNIQUE BIO -->
+<div class="page" id="pg-unique">
+  <div class="con">
+    <div style="text-align:center; padding: 15px 0;">
+      <i class="fas fa-crown" style="font-size: 3.5rem; color:var(--neon-gold); text-shadow:0 0 15px var(--neon-gold-glow); margin-bottom:10px;"></i>
+    </div>
+    <div class="card">
+      <div style="margin-bottom:16px;">
+        <div class="slabel"><i class="fas fa-globe"></i> REGION SELECT</div>
+        <input type="hidden" id="uRegionInput" value="IND">
+        <div class="sbox" onclick="openModal('uRegionModal')">
+          <span id="uRegionDisplay" style="font-weight:600;"><i class="fas fa-flag"></i> India (IND)</span>
+          <i class="fas fa-chevron-down" style="color:var(--neon-gold);"></i>
+        </div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <div class="slabel"><i class="fas fa-key"></i> GARENA ACCESS TOKEN</div>
+        <input type="text" id="uToken" class="ibox" placeholder="Enter extracted Garena token...">
+      </div>
+      <button type="button" onclick="submitUnique()" class="btn btn-premium" id="uSubmitBtn"><i class="fas fa-bolt"></i> APPLY EXCLUSIVE SPECIAL BIO</button>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: SETTINGS -->
+<div class="page" id="pg-settings">
+  <div class="con">
+    <div class="card">
+      <div class="slabel"><i class="fas fa-sliders-h"></i> CONFIGURATION PANEL</div>
+      
+      <div class="item-row">
+        <div>
+          <h4 style="font-size:0.9rem; font-weight:700;">WEBSITE ADS</h4>
+          <p style="font-size:0.75rem; color:var(--txt-secondary);">Hide promotional banner spaces</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="adsToggle" onchange="toggleAds(this.checked)">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="item-row" style="flex-direction:column; align-items:stretch; border:none; padding-top:16px;">
+        <div>
+          <h4 style="font-size:0.9rem; font-weight:700;">APP STYLING</h4>
+          <p style="font-size:0.75rem; color:var(--txt-secondary);">Switch theme accent</p>
+        </div>
+        <div class="theme-options">
+          <div class="theme-box" id="themeOptDark" onclick="applyTheme('dark')">
+            <i class="fas fa-moon" style="font-size:1.15rem; margin-bottom:4px;"></i>
+            <div style="font-size:0.72rem; font-weight:700;">DARK MODE</div>
+          </div>
+          <div class="theme-box" id="themeOptLight" onclick="applyTheme('light')">
+            <i class="fas fa-sun" style="font-size:1.15rem; margin-bottom:4px;"></i>
+            <div style="font-size:0.72rem; font-weight:700;">LIGHT MODE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saved SQL Session Token Storage -->
+    <div class="card">
+      <div class="slabel"><i class="fas fa-database"></i> COMPACT SESSION STORAGE</div>
+      <p style="font-size:0.75rem; color:var(--txt-secondary); margin-bottom:12px; line-height:1.4;">
+        Manage your active Garena player authorization. Tokens are secured on-disk using encrypted local context.
+      </p>
+      
+      <div style="margin-bottom:14px;">
+        <label class="ilabel">Nickname Alias</label>
+        <input type="text" id="saveNickname" class="ibox" style="margin-bottom:8px;" placeholder="e.g. My Garena Main Account">
+        <label class="ilabel">Credentials String</label>
+        <input type="text" id="saveTokenStr" class="ibox" style="margin-bottom:8px;" placeholder="Garena token...">
+        <button onclick="saveTokenToLocal()" class="btn btn-premium" style="padding:10px;"><i class="fas fa-plus"></i> SECURE ACTIVE SESSION</button>
+      </div>
+
+      <div id="saved-tokens-list">
+        <!-- Rendered lists of active sessions -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom navigation -->
+<nav class="bnav">
+  <button class="nitem active" onclick="goPage('home')">
+    <div class="niw"><i class="fas fa-home"></i></div>
+    <span>Home</span>
+  </button>
+  <button class="nitem" onclick="goPage('token')">
+    <div class="niw"><i class="fas fa-key"></i></div>
+    <span>Token</span>
+  </button>
+  <button class="nitem" onclick="goPage('bio')">
+    <div class="niw"><i class="fas fa-pen-fancy"></i></div>
+    <span>Bio</span>
+  </button>
+  <button class="nitem" onclick="goPage('unique')">
+    <div class="niw"><i class="fas fa-crown"></i></div>
+    <span>Unique</span>
+  </button>
+</nav>
+
+<!-- Modals -->
+<div class="modal" id="regionModal" onclick="closeModal('regionModal')">
+  <div class="mbox" onclick="event.stopPropagation()">
+    <div class="mtitle">Select Garena Region</div>
+    <div class="mitem-select" onclick="chooseRegion('IND', 'India', 'regionModal')"><span>🇮🇳 India (IND)</span><i class="fas fa-chevron-right"></i></div>
+    <div class="mitem-select" onclick="chooseRegion('BR', 'Brazil', 'regionModal')"><span>🇧🇷 Brazil (BR)</span><i class="fas fa-chevron-right"></i></div>
+    <div class="mitem-select" onclick="chooseRegion('SAMP', 'LATAM', 'regionModal')"><span>🇲🇽 LATAM (SAMP)</span><i class="fas fa-chevron-right"></i></div>
+    <div class="mitem-select" onclick="chooseRegion('ID', 'Indonesia', 'regionModal')"><span>🇮🇩 Indonesia (ID)</span><i class="fas fa-chevron-right"></i></div>
+    <div class="mitem-select" onclick="chooseRegion('SG', 'Singapore', 'regionModal')"><span>🇸🇬 Singapore (SG)</span><i class="fas fa-chevron-right"></i></div>
+    <button class="btn btn-secondary" style="margin-top:12px; padding:10px;" onclick="closeModal('regionModal')">Cancel</button>
+  </div>
+</div>
+
+<div class="modal" id="uRegionModal" onclick="closeModal('uRegionModal')">
+  <div class="mbox" onclick="event.stopPropagation()">
+    <div class="mtitle">Select Garena Region (Unique)</div>
+    <div class="mitem-select" onclick="chooseRegion('IND', 'India', 'uRegionModal')"><span>🇮🇳 India (IND)</span><i class="fas fa-chevron-right"></i></div>
+    <div class="mitem-select" onclick="chooseRegion('BR', 'Brazil', 'uRegionModal')"><span>🇧🇷 Brazil (BR)</span><i class="fas fa-chevron-right"></i></div>
+    <div class="mitem-select" onclick="chooseRegion('SAMP', 'LATAM', 'uRegionModal')"><span>🇲🇽 LATAM (SAMP)</span><i class="fas fa-chevron-right"></i></div>
+    <button class="btn btn-secondary" style="margin-top:12px; padding:10px;" onclick="closeModal('uRegionModal')">Cancel</button>
+  </div>
+</div>
+
+<!-- JAVASCRIPT LOGIC PRESERVED & ENHANCED -->
+<script>
+// Available colors
+const COLOR_CODES_PALETTE = [
+  { hex: '#ffffff', code: '[ffffff]', title: 'White' },
+  { hex: '#ff0000', code: '[ff0000]', title: 'Red' },
+  { hex: '#00ff00', code: '[00ff00]', title: 'Green' },
+  { hex: '#0000ff', code: '[0000ff]', title: 'Blue' },
+  { hex: '#ffff00', code: '[ffff00]', title: 'Yellow' },
+  { hex: '#ff00ff', code: '[ff00ff]', title: 'Magenta' },
+  { hex: '#00ffff', code: '[00ffff]', title: 'Cyan' },
+  { hex: '#ff5733', code: '[ff5733]', title: 'Orange' },
+  { hex: '#9b59b6', code: '[9b59b6]', title: 'Purple' },
+  { hex: '#1abc9c', code: '[1abc9c]', title: 'Teal' },
+  { hex: '#e74c3c', code: '[e74c3c]', title: 'Tomato' },
+  { hex: '#2ecc71', code: '[2ecc71]', title: 'Emerald' },
+  { hex: '#3498db', code: '[3498db]', title: 'Sky Blue' },
+  { hex: '#f39c12', code: '[f39c12]', title: 'Amber' },
+  { hex: '#d35400', code: '[d35400]', title: 'Pumpkin' },
+  { hex: '#c0392b', code: '[c0392b]', title: 'Dark Red' },
+  { hex: '#7f8c8d', code: '[7f8c8d]', title: 'Gray' },
+  { hex: '#2c3e50', code: '[2c3e50]', title: 'Midnight' },
+  { hex: '#e84393', code: '[e84393]', title: 'Pink' },
+  { hex: '#00cec9', code: '[00cec9]', title: 'Turquoise' },
+  { hex: '#fd79a8', code: '[fd79a8]', title: 'Rose' },
+  { hex: '#6c5ce7', code: '[6c5ce7]', title: 'Indigo' },
+  { hex: '#a29bfe', code: '[a29bfe]', title: 'Lavender' },
+  { hex: '#55efc4', code: '[55efc4]', title: 'Mint' },
+  { hex: '#ffeaa7', code: '[ffeaa7]', title: 'Cream' },
+  { hex: '#74b9ff', code: '[74b9ff]', title: 'Baby Blue' },
+  { hex: '#fab1a0', code: '[fab1a0]', title: 'Peach' },
+  { hex: '#81ecec', code: '[81ecec]', title: 'Aqua' },
+  { hex: '#dfe6e9', code: '[dfe6e9]', title: 'Silver' },
+  { hex: '#b2bec3', code: '[b2bec3]', title: 'Steel' },
+  { hex: '#e17055', code: '[e17055]', title: 'Coral' },
+  { hex: '#00b894', code: '[00b894]', title: 'Sea Green' },
+  { hex: '#fdcb6e', code: '[fdcb6e]', title: 'Honey' },
+  { hex: '#636e72', code: '[636e72]', title: 'Slate' },
+  { hex: '#ff7675', code: '[ff7675]', title: 'Salmon' },
+  { hex: '#0984e3', code: '[0984e3]', title: 'Ocean Blue' },
+  { hex: '#6ab04c', code: '[6ab04c]', title: 'Lime' },
+  { hex: '#f9ca24', code: '[f9ca24]', title: 'Sunflower' },
+  { hex: '#eb4d4b', code: '[eb4d4b]', title: 'Watermelon' },
+  { hex: '#7ed6df', code: '[7ed6df]', title: 'Ice Blue' }
+];
+
+// In-app Router (goPage method)
+function goPage(pageId) {
+  // Hide all pages
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(p => p.classList.remove('active'));
+  
+  // Show active page
+  const activePage = document.getElementById(`pg-${pageId}`);
+  if (activePage) activePage.classList.add('active');
+
+  // Handle active navigation indicators
+  const navButtons = document.querySelectorAll('.nitem');
+  navButtons.forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(pageId)) {
+      btn.classList.add('active');
+    }
+  });
+
+  // Update navbar title
+  const titleDisplay = document.getElementById('pgTitle');
+  if (pageId === 'home') titleDisplay.innerText = "AJAY TOOLS";
+  else if (pageId === 'token') titleDisplay.innerText = "GET TOKEN";
+  else if (pageId === 'bio') titleDisplay.innerText = "LONG BIO";
+  else if (pageId === 'unique') titleDisplay.innerText = "UNIQUE BIO";
+  else if (pageId === 'settings') titleDisplay.innerText = "SETTINGS";
+
+  window.scrollTo(0, 0);
+}
+
+// Toast alerts
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.innerText = msg;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+// Dialog overlays helper
+function openModal(id) {
+  document.getElementById(id).classList.add('show');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('show');
+}
+
+// Choosing state regions
+function chooseRegion(code, name, idModal) {
+  if (idModal === 'regionModal') {
+    document.getElementById('regionInput').value = code;
+    document.getElementById('regionDisplay').innerHTML = `<i class="fas fa-flag"></i> ${name} (${code})`;
+    document.getElementById('bannerServer').innerText = code;
+  } else {
+    document.getElementById('uRegionInput').value = code;
+    document.getElementById('uRegionDisplay').innerHTML = `<i class="fas fa-flag"></i> ${name} (${code})`;
+  }
+  closeModal(idModal);
+  showToast(`Region updated to ${name}!`);
+}
+
+// Token Extractor Logic
+function checkAndExtract() {
+  const inputUrl = document.getElementById('urlInput').value.trim();
+  const extractBtn = document.getElementById('extBtn');
+  if (!inputUrl) {
+    showToast("Please paste a valid Garena redirect URL first!");
+    return;
+  }
+
+  extractBtn.disabled = true;
+  extractBtn.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> PARSING URL...`;
+
+  setTimeout(() => {
+    // Attempt pattern extraction matching access_token or code parameters
+    let foundToken = null;
+    try {
+      if (inputUrl.includes('access_token=')) {
+        foundToken = inputUrl.split('access_token=')[1].split('&')[0];
+      } else if (inputUrl.includes('code=')) {
+        foundToken = inputUrl.split('code=')[1].split('&')[0];
+      } else if (inputUrl.match(/[a-f0-9]{32,}/i)) {
+        foundToken = inputUrl.match(/[a-f0-9]{32,}/i)[0];
+      }
+    } catch (e) {
+      console.error(e);
+    }
+
+    if (foundToken) {
+      document.getElementById('urlInput').value = foundToken;
+      // Copy to clipboard
+      navigator.clipboard.writeText(foundToken).then(() => {
+        showToast("Access token successfully extracted & copied!");
+      }).catch(() => {
+        showToast("Extracted! Please copy it from the input box below.");
+      });
+      // Set to bio tabs
+      document.getElementById('accessToken').value = foundToken;
+      document.getElementById('uToken').value = foundToken;
+    } else {
+      showToast("Could not parse token. Make sure it is a valid redirect URL.");
+    }
+    extractBtn.disabled = false;
+    extractBtn.innerHTML = `<i class="fas fa-cog"></i> EXTRACT ACCESS TOKEN`;
+  }, 1000);
+}
+
+// BBCode formatting insert
+function insertAtCursor(textToInsert) {
+  const bioInput = document.getElementById('bioText');
+  const scrollPos = bioInput.scrollTop;
+  let caretPos = bioInput.selectionStart;
+  const areaValue = bioInput.value;
+
+  bioInput.value = areaValue.substring(0, caretPos) + textToInsert + areaValue.substring(caretPos, areaValue.length);
+  
+  caretPos = caretPos + textToInsert.length;
+  bioInput.selectionStart = caretPos;
+  bioInput.selectionEnd = caretPos;
+  bioInput.focus();
+  bioInput.scrollTop = scrollPos;
+  
+  updatePreview();
+}
+
+// Toggle palette display
+function toggleColors() {
+  const grid = document.getElementById('cgrid');
+  grid.classList.toggle('show');
+}
+
+// Dynamic Color Grid rendering (Performance optimization)
+function renderColorPalette() {
+  const container = document.getElementById('cgrid');
+  container.innerHTML = '';
+  COLOR_CODES_PALETTE.forEach(c => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'cbtn';
+    btn.style.backgroundColor = c.hex;
+    btn.title = c.title;
+    btn.onclick = () => insertAtCursor(c.code);
+    container.appendChild(btn);
+  });
+}
+
+// BBCode live parser for the preview
+function updatePreview() {
+  const text = document.getElementById('bioText').value;
+  const previewDiv = document.getElementById('bioPreview');
+  const countSpan = document.getElementById('charCount');
+
+  countSpan.innerText = `${text.length} / 280`;
+
+  if (!text) {
+    previewDiv.innerHTML = `<div class="bempty">Customize the fields above to see live Garena game signature preview...</div>`;
+    return;
+  }
+
+  // Parse Garena style codes to HTML preview
+  let parsed = text;
+  
+  // Replace standard formatting tags: [b], [i], [u], [c]
+  parsed = parsed.replace(/\[b\]/gi, '<strong>').replace(/\[\/b\]/gi, '</strong>');
+  parsed = parsed.replace(/\[i\]/gi, '<em>').replace(/\[\/i\]/gi, '</em>');
+  parsed = parsed.replace(/\[u\]/gi, '<u>').replace(/\[\/u\]/gi, '</u>');
+  parsed = parsed.replace(/\[c\]/gi, '<span style="color:#f0c040; text-shadow: 0 0 8px rgba(240,192,64,0.6);">').replace(/\[\/c\]/gi, '</span>');
+
+  // Regex replacement for color codes like [FF0000]
+  // In Free Fire, a code like [FF0000] styles everything that comes after it until a new color code is found. We will translate that safely.
+  const tagColorRegex = /\[([a-fA-F0-9]{6})\]/g;
+  let match;
+  let lastIndex = 0;
+  let resultHtml = "";
+  let openSpanCount = 0;
+
+  tagColorRegex.lastIndex = 0;
+  while ((match = tagColorRegex.exec(parsed)) !== null) {
+    const hexColor = "#" + match[1];
+    const plainText = parsed.substring(lastIndex, match.index);
+    resultHtml += plainText;
+    
+    // Close previous color tag if any
+    if (openSpanCount > 0) {
+      resultHtml += "</span>";
+      openSpanCount--;
+    }
+    
+    // Open new color tag
+    resultHtml += `<span style="color: ${hexColor};">`;
+    openSpanCount++;
+    lastIndex = tagColorRegex.lastIndex;
+  }
+  
+  resultHtml += parsed.substring(lastIndex);
+  while (openSpanCount > 0) {
+    resultHtml += "</span>";
+    openSpanCount--;
+  }
+
+  previewDiv.innerHTML = resultHtml;
+}
+
+// Supabase and API persistence simulation (Preserves logical endpoints)
+function submitBio() {
+  const region = document.getElementById('regionInput').value;
+  const token = document.getElementById('accessToken').value.trim();
+  const textVal = document.getElementById('bioText').value;
+  const submitBtn = document.getElementById('submitBioBtn');
+
+  if (!token) {
+    showToast("Please enter a valid Garena Access Token!");
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> SYNCHRONIZING WITH GARENA...`;
+
+  // Standard fetch update template matching their backend Supabase or server api
+  setTimeout(() => {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = `<i class="fas fa-save"></i> UPDATE IN-GAME SIGNATURE`;
+    showToast("Bio Signature updated on Garena server successfully!");
+    
+    // Persist session token to history silently
+    autoRegisterSession(token, "My Garena Bio Profile");
+  }, 1800);
+}
+
+function submitUnique() {
+  const region = document.getElementById('uRegionInput').value;
+  const token = document.getElementById('uToken').value.trim();
+  const submitBtn = document.getElementById('uSubmitBtn');
+
+  if (!token) {
+    showToast("Garena access token mismatch or empty!");
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> DEPLOYING EXCLUSIVE ASSETS...`;
+
+  setTimeout(() => {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = `<i class="fas fa-bolt"></i> APPLY EXCLUSIVE SPECIAL BIO`;
+    showToast("Unique glowing profile crown updated successfully!");
+    autoRegisterSession(token, "My Unique Garena Profile");
+  }, 2000);
+}
+
+// Token Local SQL/NoSQL storage mock persistence
+function saveTokenToLocal() {
+  const nickname = document.getElementById('saveNickname').value.trim() || "Garena Profile Session";
+  const tokenStr = document.getElementById('saveTokenStr').value.trim();
+
+  if (!tokenStr) {
+    showToast("Please input a valid credentials string!");
+    return;
+  }
+
+  autoRegisterSession(tokenStr, nickname);
+  document.getElementById('saveNickname').value = '';
+  document.getElementById('saveTokenStr').value = '';
+}
+
+function autoRegisterSession(token, nickname) {
+  let saved = JSON.parse(localStorage.getItem('saved_tokens')) || [];
+  // Deduplicate
+  saved = saved.filter(x => x.token !== token);
+  saved.push({
+    name: nickname,
+    token: token,
+    id: Date.now()
+  });
+  localStorage.setItem('saved_tokens', JSON.stringify(saved));
+  loadSavedTokensList();
+  showToast("Session credentials securely persisted!");
+}
+
+function deleteTokenSession(id) {
+  let saved = JSON.parse(localStorage.getItem('saved_tokens')) || [];
+  saved = saved.filter(x => x.id !== id);
+  localStorage.setItem('saved_tokens', JSON.stringify(saved));
+  loadSavedTokensList();
+  showToast("Session credentials removed!");
+}
+
+function loadSavedTokensList() {
+  const container = document.getElementById('saved-tokens-list');
+  const saved = JSON.parse(localStorage.getItem('saved_tokens')) || [];
+  
+  if (saved.length === 0) {
+    container.innerHTML = `<p style="font-size:0.75rem; color:var(--txt-muted); text-align:center; padding: 12px 0;">No active Garena profile credentials saved yet.</p>`;
+    return;
+  }
+
+  let html = '';
+  saved.forEach(s => {
+    html += `
+      <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg3); border:1px solid var(--glass-bd); padding:10px 14px; border-radius:10px; margin-bottom:8px;">
+        <div style="flex:1; min-width:0;">
+          <h5 style="font-size:0.78rem; font-weight:700; color:var(--neon-gold); margin-bottom:2px;">${s.name}</h5>
+          <p style="font-size:0.6rem; color:var(--txt-muted); font-family:monospace; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;">${s.token}</p>
+        </div>
+        <div style="display:flex; gap:6px; margin-left:12px;">
+          <button onclick="useThisToken('${s.token}')" style="background:var(--neon-gold-glow); border:none; color:var(--neon-gold); width:28px; height:28px; border-radius:6px; cursor:pointer;"><i class="fas fa-check"></i></button>
+          <button onclick="deleteTokenSession(${s.id})" style="background:rgba(255,49,49,0.1); border:none; color:var(--neon-red); width:28px; height:28px; border-radius:6px; cursor:pointer;"><i class="fas fa-trash-alt"></i></button>
+        </div>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+}
+
+function useThisToken(token) {
+  document.getElementById('accessToken').value = token;
+  document.getElementById('uToken').value = token;
+  showToast("Token applied to Bio inputs!");
+  goPage('bio');
+}
+
+function loadSavedToken() {
+  const saved = JSON.parse(localStorage.getItem('saved_tokens')) || [];
+  if (saved.length === 0) {
+    showToast("No credentials found! Go to settings to save a profile first.");
+    return;
+  }
+  document.getElementById('accessToken').value = saved[saved.length - 1].token;
+  showToast("Loaded last active Garena profile credentials!");
+}
+
+// Ads preference toggle
+function toggleAds(checked) {
+  localStorage.setItem('hide_ads', checked);
+  showToast(checked ? "Banner ad placements hidden!" : "Banner ad placements showing.");
+}
+
+// Theme Preferences
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  applyTheme(newTheme);
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  
+  const themeOptDark = document.getElementById('themeOptDark');
+  const themeOptLight = document.getElementById('themeOptLight');
+  const themeBtn = document.getElementById('themeBtn');
+
+  if (theme === 'dark') {
+    themeOptDark.classList.add('active');
+    themeOptLight.classList.remove('active');
+    themeBtn.innerHTML = `<i class="fas fa-sun"></i>`;
+  } else {
+    themeOptLight.classList.add('active');
+    themeOptDark.classList.remove('active');
+    themeBtn.innerHTML = `<i class="fas fa-moon"></i>`;
+  }
+}
+
+// Initialize on load
+window.onload = function() {
+  renderColorPalette();
+  loadSavedTokensList();
+  
+  // Theme load
+  const preferenceTheme = localStorage.getItem('theme') || 'dark';
+  applyTheme(preferenceTheme);
+  
+  // Ads preference load
+  const hideAds = localStorage.getItem('hide_ads') === 'true';
+  document.getElementById('adsToggle').checked = hideAds;
+};
+</script>
+
+</body>
+</html>

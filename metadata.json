@@ -1,0 +1,6 @@
+{
+  "name": "AJAY TOOLS",
+  "description": "Free Fire Long Bio and Bio Tools by AJAY. Redesigned with a premium Cyberpunk and gaming-mode aesthetic, bringing you professional bio utilities and access token extraction features.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
